@@ -1,0 +1,17 @@
+release/main.o
+release/serverwidget.o
+release/mytcpserver.o
+release/dbmanager.o
+release/logindialog.o
+release/adddishdialog.o
+release/thememanager.o
+release/themecolordialog.o
+release/qrcodedialog.o
+release/moc_serverwidget.o
+release/moc_mytcpserver.o
+release/moc_dbmanager.o
+release/moc_logindialog.o
+release/moc_adddishdialog.o
+release/moc_thememanager.o
+release/moc_themecolordialog.o
+release/moc_qrcodedialog.o

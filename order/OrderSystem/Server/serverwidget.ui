@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ServerWidget</class>
+ <widget class="QWidget" name="ServerWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>点餐终端 - 服务器端</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <layout class="QHBoxLayout" name="themeLayout">
+     <item>
+      <widget class="QLabel" name="lblTime">
+       <property name="font">
+        <font>
+         <family>仿宋</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string>font-size: 14px; font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>当前时间：--</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacerTheme">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSelectTheme">
+       <property name="text">
+        <string>选择主题</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSetBackground">
+       <property name="text">
+        <string>设置背景</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClearBackground">
+       <property name="text">
+        <string>清除背景</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="serverLayout">
+     <item>
+      <widget class="QLabel" name="lblStatus">
+       <property name="styleSheet">
+        <string>color: red; font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>服务器状态：已停止</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacer1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>端口：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="spinPort">
+       <property name="minimum">
+        <number>1024</number>
+       </property>
+       <property name="maximum">
+        <number>65535</number>
+       </property>
+       <property name="value">
+        <number>8888</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnStartServer">
+       <property name="text">
+        <string>启动服务器</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <widget class="QWidget" name="tabMenu">
+      <attribute name="title">
+       <string>菜单管理</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="menuTabLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QPushButton" name="btnAddDish">
+           <property name="styleSheet">
+            <string>QPushButton{background-color:rgba(230,126,34,0.7);color:white;font-weight:bold;padding:6px 20px;font-size:20px;border-radius:4px;}
+QPushButton:hover{background-color:rgba(230,126,34,0.9);}</string>
+           </property>
+           <property name="text">
+            <string>+</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDeleteDish">
+           <property name="styleSheet">
+            <string>QPushButton{background-color:rgba(231,76,60,0.7);color:white;font-weight:bold;padding:6px 20px;font-size:20px;border-radius:4px;}
+QPushButton:hover{background-color:rgba(231,76,60,0.9);}</string>
+           </property>
+           <property name="text">
+            <string>-</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnEditDish">
+           <property name="styleSheet">
+            <string>QPushButton{background-color:rgba(52,152,219,0.7);color:white;font-weight:bold;padding:6px 14px;border-radius:4px;}
+QPushButton:hover{background-color:rgba(52,152,219,0.9);}</string>
+           </property>
+           <property name="text">
+            <string>编辑</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spacer2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="editSearch">
+           <property name="placeholderText">
+            <string>搜索菜品...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnSearch">
+           <property name="styleSheet">
+            <string>QPushButton{background-color:rgba(46,204,113,0.7);color:white;font-weight:bold;padding:6px 14px;border-radius:4px;}
+QPushButton:hover{background-color:rgba(46,204,113,0.9);}</string>
+           </property>
+           <property name="text">
+            <string>筛选</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnRefreshMenu">
+           <property name="text">
+            <string>刷新菜单</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableMenu">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOrders">
+      <attribute name="title">
+       <string>订单列表</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="orderTabLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <spacer name="spacer3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnRefreshOrders">
+           <property name="text">
+            <string>刷新订单</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableOrders">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblLog">
+     <property name="text">
+      <string>通信日志：</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="txtLog">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>120</height>
+      </size>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

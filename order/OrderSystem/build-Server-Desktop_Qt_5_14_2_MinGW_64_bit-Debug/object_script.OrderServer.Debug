@@ -1,0 +1,17 @@
+debug/main.o
+debug/serverwidget.o
+debug/mytcpserver.o
+debug/dbmanager.o
+debug/logindialog.o
+debug/adddishdialog.o
+debug/thememanager.o
+debug/themecolordialog.o
+debug/qrcodedialog.o
+debug/moc_serverwidget.o
+debug/moc_mytcpserver.o
+debug/moc_dbmanager.o
+debug/moc_logindialog.o
+debug/moc_adddishdialog.o
+debug/moc_thememanager.o
+debug/moc_themecolordialog.o
+debug/moc_qrcodedialog.o
